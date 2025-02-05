@@ -28,7 +28,7 @@ def create_project_structure(base_directory, project_name):
 
 
 if __name__ == "__main__":
-    base_directory = "/home/mukesh/temp2"  # Change this to your base directory
+    base_directory = "/home/temp2"  # Change this to your base directory
     project_name = input("Enter Project Name: ")  # Change to your project name
 
     create_project_structure(base_directory, project_name)
