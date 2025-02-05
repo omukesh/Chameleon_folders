@@ -24,7 +24,7 @@ def create_project_structure(base_directory, project_name):
         for sub_dir in sub_dirs:
             os.makedirs(os.path.join(folder_path, f"{folder}_{sub_dir}"), exist_ok=True)
 
-    print(f"✅ Folder structure for '{project_name}' created successfully at {project_path}")
+    print(f" Folder structure for '{project_name}' created successfully at {project_path}")
 
 
 if __name__ == "__main__":
