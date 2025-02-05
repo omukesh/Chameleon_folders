@@ -13,5 +13,5 @@ This project automates **folder creation** and **dynamic renaming** for standard
    git clone https://github.com/omukesh/Chameleon_folders
    cd Chameleon_folders
 2. Install Requirements:
-
+   ```bash
     pip install -r requirements.txt
