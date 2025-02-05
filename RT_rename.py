@@ -19,7 +19,7 @@ class RenameHandler(FileSystemEventHandler):
                         os.path.join(root, dir_name),
                         os.path.join(root, new_dir_name)
                     )
-                    print(f"✅ Renamed Directory: {dir_name} → {new_dir_name}")
+                    print(f" Renamed Directory: {dir_name} → {new_dir_name}")
 
             for file_name in files:
                 if old_name in file_name:
@@ -28,7 +28,7 @@ class RenameHandler(FileSystemEventHandler):
                         os.path.join(root, file_name),
                         os.path.join(root, new_file_name)
                     )
-                    print(f"✅ Renamed File: {file_name} → {new_file_name}")
+                    print(f" Renamed File: {file_name} → {new_file_name}")
 
     def on_moved(self, event):
         """Detects folder renames and applies changes inside."""
@@ -43,15 +43,15 @@ class RenameHandler(FileSystemEventHandler):
                 return  # Prevent duplicate triggers
 
             self.previous_name = new_name  # Store new name
-            print(f"📌 Detected rename: {old_name} → {new_name}")
+            print(f" Detected rename: {old_name} → {new_name}")
 
             # Call renaming function
             self.rename_subfolders(new_path, old_name, new_name)
-            print("✅ All nested folders & files renamed successfully.")
+            print(" All nested folders & files renamed successfully.")
 
 
 if __name__ == "__main__":
-    base_directory = "/home/mukesh/temp2/"  # Adjust this path if needed
+    base_directory = "/home/temp2/"  # Adjust this path if needed
 
     event_handler = RenameHandler(base_directory)
     observer = Observer()
